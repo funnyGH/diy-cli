@@ -1,0 +1,32 @@
+{
+  "name": "diy-cli-dev",
+  "version": "1.0.0",
+  "main": "src/diycli.js",
+  "bin": {
+    "diycli": "bin/diycli.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^2.4.2",
+    "commander": "^2.20.0",
+    "download-git-repo": "3.0.0",
+    "execa": "1.0.0",
+    "handlebars": "^4.1.2",
+    "inquirer": "^6.3.1",
+    "ora": "^3.4.0",
+    "semver": "^6.1.1"
+  },
+  "devDependencies": {},
+  "engines": {
+    "node": ">=8.9"
+  },
+  "directories": {
+    "lib": "lib"
+  },
+  "description": "> diycli"
+}
