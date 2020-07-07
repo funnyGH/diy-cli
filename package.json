@@ -28,5 +28,13 @@
   "directories": {
     "lib": "lib"
   },
-  "description": "> diycli"
+  "description": "> diycli",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/funnyGH/diy-cli.git"
+  },
+  "bugs": {
+    "url": "https://github.com/funnyGH/diy-cli/issues"
+  },
+  "homepage": "https://github.com/funnyGH/diy-cli#readme"
 }

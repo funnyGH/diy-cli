@@ -89,5 +89,33 @@ module.exports = function diycli() {
       require('../lib/init')(name, options);
     });
 
+  program
+    .command("start")
+    .description(chalk.green("启动项目 [指定路径下的项目]"))
+    .action(name => {
+      name = typeof name !== "string" ? "." : name;
+      require("../lib/start")(name);
+    });
+  
+  program.arguments("<command>").action(cmd => {
+    program.outputHelp();
+    log();
+    log(chalk.red(`错误命令 ${cmd}`));
+  });
+  
+  program.on("--help", () => {
+    log();
+    log(`执行 ${chalk.cyan("diycli <command> -h")} 以查看指令的详细使用`);
+  });
+
   program.parse(process.argv);
+  
+  if (!process.argv.slice(2).length) {
+    program.outputHelp();
+  }
+  
+  process.on("unhandledRejection", (reason, p) => {
+    // application specific logging, throwing an error, or other logic here
+    log.red("Unhandled Rejection at: Promise", p, "reason:", reason);
+  });
 };

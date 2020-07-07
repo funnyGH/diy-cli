@@ -20,3 +20,5 @@
 2 优化从git 拉代码时的等待交互，目前是无感下载
 3 断网时，该怎么处理？
 2 低版本的node会导致 initModules message 一直出现
+
+TODO: 上传代码之前需要删除 私有源IP 和 gitlab 地址。
